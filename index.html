@@ -3,27 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic CSS</title>
+    <title><!-- Basic CSS --></title>
     <style>
-        div 
+        /* div 
         {
-            color:black;
-            background-color:orange
-        }
+            font: bold 24pt comic sans ms;
+            text-decoration: underline wavy green;
+        } */
+        
     </style>
+    <script src = "utilities.js"><</script>
+        // function initialize()
+        // {
+        //     textOutput = document.getElementById("textdiv");
+        //     fontSizeOutput = document.getElementById("sizeout");
+
+        //     fontSize = 24;
+        // }
+        // function toggleColor()
+        // {
+        //     var tmp = fore;
+        //     fore = back;
+        //     back = tmp;
+
+        //     display();
+        // }
+        // function display()
+        // {
+        //     fontSizeOutput.innerHTML = fontSize;
+        //     textOutput.style.fontSize = fontSize + "pt";
+        // }
+        // function changeWidth(w)
+        // {
+        //     textWidth= w;
+        //     display();
+        // }
+        // function modifyFontSize(mod)
+        // {
+        //     fontSize += mod;
+        //     if(fontSize < 4)
+        //         fontSize = 4;
+
+        //     display();
+        // }
+        // function getRandomInteger(lower, upper)
+        // {
+        //     //R = parseInt(rnd * (upper - (lower - 1)) + lower
+        //     var multiplier = upper - (lower - 1);
+        //     var rnd = parseInt(Math.random() * multiplier) + lower;
+
+        //     return rnd;
+        // }
     <script>
         function initialize()
         {
-            halloweenText = document.getElementById("colordiv");
+            numberOutput = document.getElementById("numout");
+            rndNum = 0;
+
+            display();
+        }
+        function changeNumber()
+        {
+            rndNum = getRandomInteger(1, 10);
+            display();
+        }
+        function display()
+        {
+            numberOutput.innerHTML = rndNum;
         }
     </script>
 </head>
 <body onload = "initialize();">
-    <div id = "colordiv" >
-        Click the button to switch me from black to oragen and back again and again.  Happy Halloween.
-    </div>
-    <p>
-        <button>Toggle Colors</button>
-    </p>
+    <h1>This is my great page about external files</h1>
+    <p id = "numout"></p>
+    <button onclick = "changeNumber();"></button>Change the number</button>
+    // <div id = "textdiv" >
+    //     I am a wonderful example of how fonts work!
+    // </div>
+    // <p>
+    //     <div>Current font size: <span id = "sizeout"></span>point</div>
+    //     <button onclick = "modifyFontSize(1);">Font Size ++</button>
+    //     <button onclick = "modifyFontSize(-1)">Font Size --</button>
+    // </p>
 </body>
 </html>
